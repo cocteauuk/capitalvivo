@@ -584,6 +584,21 @@
     color:var(--ink); border-left:3px solid var(--salvia); padding-left:18px; margin-top:26px;
   }
 
+  .convic-grid{display:grid; grid-template-columns:5fr 7fr; gap:72px; align-items:start;}
+  .convic-head{position:sticky; top:116px;}
+  .convic-head h2.lede{margin-bottom:0;}
+  .convic-body p{color:var(--muted); font-size:16px; margin:0; max-width:640px;}
+  .convic-body p + p{margin-top:14px;}
+  @media (max-width:860px){
+    .convic-grid{grid-template-columns:1fr; gap:28px;}
+    .convic-head{position:static;}
+  }
+
+  /* ---------- FRANJA DE IMAGEN (entre Convicción y Catalizamos) ---------- */
+  .image-strap{height:clamp(220px, 28vw, 420px); overflow:hidden;}
+  .image-strap picture{display:block; width:100%; height:100%;}
+  .image-strap img{width:100%; height:100%; object-fit:cover; object-position:center;}
+
   /* ---------- 03 DESAFÍOS (acordeón) ---------- */
   .cat-intro{max-width:760px;}
   .cat-intro h2{font-size:clamp(26px,3vw,38px); line-height:1.3; margin-bottom:16px;}
@@ -738,25 +753,29 @@
 -->
 
 <!-- 02 · NUESTRA CONVICCIÓN -->
-<section class="convic split-section" id="convic">
-<div class="split">
-<div class="split-copy">
+<section class="convic" id="convic">
+<div class="wrap convic-grid">
+<div class="convic-head">
 <p class="eyebrow">Nuestra convicción</p>
 <h2 class="lede">Las decisiones financieras no solo asignan recursos. Tienen el poder de crear <em>condiciones para la vida</em>.</h2>
+</div>
+<div class="convic-body">
 <p>Las finanzas no operan de manera aislada. Sus decisiones, incentivos y condiciones influyen sobre las posibilidades de desarrollo de las personas, las empresas, las comunidades y los ecosistemas naturales.</p>
 <p>La manera en que se organiza y circula el capital puede ampliar oportunidades o restringirlas. También puede acelerar, dificultar o condicionar los procesos de transformación que necesitan las organizaciones y los territorios.</p>
 <p>Reconocemos que estos procesos requieren tiempo para conocer, aprender, construir confianza, experimentar y desarrollar capacidades. Sin embargo, los plazos, las exigencias y las restricciones del financiamiento no siempre acompañan esos ritmos.</p>
 <p>Por eso, creemos necesario revisar no solamente hacia dónde se dirige el capital, sino también las relaciones, prácticas y condiciones que determinan cómo opera el ecosistema.</p>
 <p class="def">Entendemos la regeneración como una forma de ser, conocer, aprender, relacionarse y actuar que reconoce las interdependencias y busca fortalecer las capacidades de los sistemas para sostener y renovar las condiciones que hacen posible su desarrollo.</p>
 </div>
-<div class="split-media">
+</div>
+</section>
+
+<!-- Franja de imagen a todo el ancho entre Convicción y Catalizamos -->
+<div class="image-strap">
 <picture>
 <source srcset="images/conviccion.webp" type="image/webp"/>
 <img alt="Nervaduras de una hoja a contraluz, red de conducción que distribuye recursos por todo el tejido" decoding="async" height="1600" loading="lazy" src="images/conviccion.jpg" width="1200"/>
 </picture>
 </div>
-</div>
-</section>
 
 <!-- 03 · CATALIZAMOS TRANSFORMACIONES -->
 <section class="alt" id="catalizamos">
